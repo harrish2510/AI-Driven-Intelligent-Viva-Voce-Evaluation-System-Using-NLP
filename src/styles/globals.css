@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================
+   DESIGN SYSTEM – CLEAN + MODERN
+   ===================================== */
+
+:root {
+  --bg-page: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.96);
+  --border: rgba(148, 163, 184, 0.28);
+
+  --text-heading: #020617;
+  --text-body: #0f172a;
+  --text-muted: #475569;
+
+  --primary: #0891b2;
+  --primary-hover: #0e7490;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-page: #020617;
+    --bg-card: rgba(2, 6, 23, 0.96);
+    --border: rgba(148, 163, 184, 0.16);
+
+    --text-heading: #f8fafc;
+    --text-body: #e2e8f0;
+    --text-muted: #94a3b8;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 26%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: var(--text-body);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(34, 211, 238, 0.2), transparent 28%),
+      radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 24%),
+      linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+p {
+  color: var(--text-body);
+  font-size: 1rem;
+}
+
+label {
+  color: var(--text-heading);
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--bg-card);
+  color: var(--text-body);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(6, 182, 212, 0.65);
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12);
+}
+
+button {
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bg-blue-600 {
+  background-color: var(--primary) !important;
+}
+
+.bg-blue-600:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.bg-green-600 {
+  background-color: var(--success) !important;
+}
+
+.bg-red-600 {
+  background-color: var(--danger) !important;
+}
+
+.card,
+.bg-white {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+}
